@@ -1,0 +1,58 @@
+[
+  {
+    "product_id": "P001",
+    "name": "Wireless Mouse",
+    "category": "Electronics",
+    "brand": "TechGear",
+    "cost_price": 12.50,
+    "stock_quantity": 200
+  },
+  {
+    "product_id": "P002",
+    "name": "Notebook (A5)",
+    "category": "Stationery",
+    "brand": "WriteWell",
+    "cost_price": 3.25,
+    "stock_quantity": 500
+  },
+  {
+    "product_id": "P003",
+    "name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "brand": "TechGear",
+    "cost_price": 72.00,
+    "stock_quantity": 80
+  },
+  {
+    "product_id": "P004",
+    "name": "Desk Lamp",
+    "category": "Home Office",
+    "brand": "BrightSpace",
+    "cost_price": 24.00,
+    "stock_quantity": 150
+  },
+  {
+    "product_id": "P005",
+    "name": "USB-C Hub",
+    "category": "Electronics",
+    "brand": "TechGear",
+    "cost_price": 35.00,
+    "stock_quantity": 120
+  },
+  {
+    "product_id": "P006",
+    "name": "Monitor Stand",
+    "category": "Home Office",
+    "brand": "ErgoDesk",
+    "cost_price": 85.00,
+    "stock_quantity": 60
+  },
+  {
+    "product_id": "P007",
+    "name": "Standing Desk Mat",
+    "category": "Home Office",
+    "brand": "ErgoDesk",
+    "cost_price": 140.00,
+    "stock_quantity": 45
+  }
+]
