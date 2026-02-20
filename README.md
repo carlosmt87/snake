@@ -60,8 +60,8 @@ A fictional retail company sells electronics, stationery, and home office produc
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/data-engineering-portfolio
-cd data-engineering-portfolio
+git clone https://github.com/carlosmt87/snake
+cd snake
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
