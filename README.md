@@ -47,6 +47,8 @@ A fictional retail company sells electronics, stationery, and home office produc
 │   ├── validate.py            # Stage 2 – data quality checks
 │   ├── transform.py           # Stage 3 – clean, enrich, aggregate
 │   └── load.py                # Stage 4 – write to SQLite and CSV
+├── notebooks/
+│   └── exploration.ipynb      # Jupyter notebook: charts and analysis
 ├── tests/
 │   └── test_pipeline.py       # Unit tests for every module
 ├── pipeline.py                # Main entry point — runs the full pipeline
@@ -186,10 +188,29 @@ pandas operations can modify DataFrames in place unexpectedly. Calling `.copy()`
 | Library | Version | Purpose |
 |---|---|---|
 | [pandas](https://pandas.pydata.org/) | 2.2.x | Data manipulation and analysis |
+| [matplotlib](https://matplotlib.org/) | 3.9.x | Charts and visualisations |
 | [sqlite3](https://docs.python.org/3/library/sqlite3.html) | stdlib | Database storage and querying |
 | [pytest](https://pytest.org/) | 8.x | Unit testing |
+| [jupyter](https://jupyter.org/) | 1.1.x | Interactive notebook environment |
 
 All dependencies are pure Python — no database server, no Docker, no cloud account required.
+
+## Exploring the Data (Jupyter Notebook)
+
+After running the pipeline, open the notebook to interactively explore the results:
+
+```bash
+jupyter notebook notebooks/exploration.ipynb
+```
+
+The notebook covers:
+- Summary statistics across all 50 transactions
+- Revenue and profit by category (bar charts)
+- Daily sales trend (line + bar chart)
+- Store performance comparison
+- Top products by revenue (horizontal bar chart)
+- Discount impact scatter plot
+- Known vs unknown customer breakdown (pie chart)
 
 ## Ideas for Extension
 
@@ -199,6 +220,6 @@ Once you're comfortable with the project, here are some ways to take it further:
 - **Schedule the pipeline** — use Python's `schedule` library to run it on a timer
 - **Add more validations** — check referential integrity (every `product_id` in sales exists in products)
 - **Swap SQLite for PostgreSQL** — use `psycopg2` and change the connection string in `load.py`
-- **Visualise the results** — add a `notebooks/` folder with a Jupyter notebook that charts the aggregations
+- **Extend the notebook** — add moving averages, correlation heatmaps, or interactive plots with Plotly
 - **Parametrise with config** — move file paths and settings into a `config.yaml` file read at startup
 - **Add CI** — create a GitHub Actions workflow that runs `pytest` on every push
